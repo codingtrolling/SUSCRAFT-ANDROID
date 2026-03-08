@@ -1,0 +1,2 @@
+rootProject.name = "SUSCRAFT-ANDROID"
+include ':app'
