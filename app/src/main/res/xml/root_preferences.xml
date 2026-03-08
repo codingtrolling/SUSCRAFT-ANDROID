@@ -1,22 +1,30 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory app:title="Performance">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="General Settings">
+
         <SeekBarPreference
-            app:key="ram_allocation"
-            app:title="RAM Allocation (MB)"
-            app:defaultValue="2048"
-            app:min="512"
-            app:max="8192" />
+            app:key="render_distance"
+            app:title="Render Distance"
+            app:defaultValue="8"
+            app:min="2"
+            android:max="32" />
+
         <SwitchPreferenceCompat
-            app:key="use_optimization_flags"
-            app:title="Enable Extra Optimizations"
-            app:summary="Uses experimental JVM flags for better FPS" />
-    </PreferenceCategory>
-    <PreferenceCategory app:title="Graphics">
+            app:key="show_fps"
+            app:title="Show FPS Counter"
+            app:summary="Display frames per second in-game"
+            app:defaultValue="true" />
+
         <ListPreference
-            app:key="resolution_scale"
-            app:title="Resolution Scaling"
-            app:entries="@array/res_entries"
-            app:entryValues="@array/res_values"
-            app:defaultValue="1.0" />
+            app:key="theme_selection"
+            app:title="UI Theme"
+            app:entries="@array/theme_names"
+            app:entryValues="@array/theme_values"
+            app:defaultValue="dark" />
+
     </PreferenceCategory>
+
 </PreferenceScreen>
