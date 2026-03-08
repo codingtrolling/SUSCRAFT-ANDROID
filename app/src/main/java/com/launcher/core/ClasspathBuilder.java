@@ -1,20 +1,26 @@
 package com.launcher.core;
 
 import java.io.File;
-import java.util.StringBuilder;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClasspathBuilder {
-    public static String build(File libDir, File clientJar) {
+    private final List<String> paths = new ArrayList<>();
+
+    public void addPath(String path) {
+        if (path != null && !path.isEmpty()) {
+            paths.add(path);
+        }
+    }
+
+    public String build() {
         StringBuilder sb = new StringBuilder();
-        File[] files = libDir.listFiles();
-        if (files != null) {
-            for (File f : files) {
-                if (f.getName().endsWith(".jar")) {
-                    sb.append(f.getAbsolutePath()).append(":");
-                }
+        for (int i = 0; i < paths.size(); i++) {
+            sb.append(paths.get(i));
+            if (i < paths.size() - 1) {
+                sb.append(File.pathSeparator);
             }
         }
-        sb.append(clientJar.getAbsolutePath());
         return sb.toString();
     }
 }
