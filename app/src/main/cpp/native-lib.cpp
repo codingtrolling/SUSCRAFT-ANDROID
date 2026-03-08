@@ -1,8 +1,11 @@
 #include <jni.h>
-#include <android/native_window_jni.h>
+#include <string>
+#include <android/log.h>
 
-extern "C" JNIEXPORT void JNICALL
-Java_com_launcher_core_GameActivity_setNativeWindow(JNIEnv* env, jobject obj, jobject surface) {
-    ANativeWindow* window = ANativeWindow_fromSurface(env, surface);
-    // This window pointer is then passed to the LWJGL implementation
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_launcher_core_MainActivity_stringFromJNI(
+        JNIEnv* env,
+        jobject /* this */) {
+    std::string hello = "SUSCRAFT Native Engine Initialized";
+    return env->NewStringUTF(hello.c_str());
 }
