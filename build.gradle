@@ -1,13 +1,6 @@
-// Root build.gradle
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        // Use a stable AGP version compatible with high Gradle versions
-        classpath 'com.android.tools.build:gradle:8.2.1'
-    }
+plugins {
+    id 'com.android.application' version '8.2.1' apply false
+    id 'com.android.library' version '8.2.1' apply false
 }
 
 allprojects {
