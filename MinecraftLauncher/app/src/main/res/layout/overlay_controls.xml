@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <Button
+        android:id="@+id/btn_up"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="W"
+        android:layout_above="@+id/btn_down"
+        android:layout_alignStart="@+id/btn_down" />
+
+    <Button
+        android:id="@+id/btn_down"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="S"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="A"
+        android:layout_toStartOf="@+id/btn_down"
+        android:layout_alignTop="@+id/btn_down" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="D"
+        android:layout_toEndOf="@+id/btn_down"
+        android:layout_alignTop="@+id/btn_down" />
+
+    <Button
+        android:id="@+id/btn_jump"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="JUMP"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp" />
+
+</RelativeLayout>

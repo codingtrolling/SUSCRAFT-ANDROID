@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mc_dirt">#3D2923</color>
+    <color name="mc_grass">#557016</color>
+    <color name="mc_stone">#7A7A7A</color>
+    <color name="white">#FFFFFF</color>
+</resources>
