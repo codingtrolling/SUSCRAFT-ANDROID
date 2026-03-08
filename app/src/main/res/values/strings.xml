@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Custom Java Launcher</string>
+    <string name="launch_btn">Launch Minecraft</string>
+    <string name="downloading">Downloading assets...</string>
+</resources>

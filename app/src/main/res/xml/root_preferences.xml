@@ -1,0 +1,22 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="Performance">
+        <SeekBarPreference
+            app:key="ram_allocation"
+            app:title="RAM Allocation (MB)"
+            app:defaultValue="2048"
+            app:min="512"
+            app:max="8192" />
+        <SwitchPreferenceCompat
+            app:key="use_optimization_flags"
+            app:title="Enable Extra Optimizations"
+            app:summary="Uses experimental JVM flags for better FPS" />
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Graphics">
+        <ListPreference
+            app:key="resolution_scale"
+            app:title="Resolution Scaling"
+            app:entries="@array/res_entries"
+            app:entryValues="@array/res_values"
+            app:defaultValue="1.0" />
+    </PreferenceCategory>
+</PreferenceScreen>
